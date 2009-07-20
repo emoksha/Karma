@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id_giving: 
+  user_id_receiving: 
+  post_id: 
+  description: 
+  state: 
+  rating: 1
+
+two:
+  user_id_giving: 
+  user_id_receiving: 
+  post_id: 
+  description: 
+  state: 
+  rating: 1

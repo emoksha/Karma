@@ -1,0 +1,19 @@
+<%= form_tag :action=> "loginverify" %>
+<h2>Aazis</h2>
+<h3>Track non-monetary transactions between friends, families and anyone</h3> 
+
+<% if flash[:message] %>
+<div class="message"><h3><%= flash[:message] %></h3><br></div>
+<% end %>
+
+<label for="user_email">Email:</label><br/>
+<%= text_field "user", "email", :size => 20 %><br/>
+
+<label for="user_password">Password:</label><br/>
+<%= password_field "user", "password", :size => 20 %><br/>
+
+<%= submit_tag "Submit" %>
+
+<%= link_to 'Signup', :action => 'signup' %>
+
+<%= form_tag %>

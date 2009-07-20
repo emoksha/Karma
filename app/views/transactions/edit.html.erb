@@ -1,0 +1,36 @@
+<h1>Editing transaction</h1>
+
+<% form_for(@transaction) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :user_id_giving %><br />
+    <%= f.text_field :user_id_giving %>
+  </p>
+  <p>
+    <%= f.label :user_id_receiving %><br />
+    <%= f.text_field :user_id_receiving %>
+  </p>
+  <p>
+    <%= f.label :post_id %><br />
+    <%= f.text_field :post_id %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :rating %><br />
+    <%= f.text_field :rating %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @transaction %> |
+<%= link_to 'Back', transactions_path %>

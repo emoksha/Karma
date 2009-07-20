@@ -1,0 +1,33 @@
+<p>
+  <b>User id giving:</b>
+  <%=h @transaction.user_id_giving %>
+</p>
+
+<p>
+  <b>User id receiving:</b>
+  <%=h @transaction.user_id_receiving %>
+</p>
+
+<p>
+  <b>Post:</b>
+  <%=h @transaction.post_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @transaction.description %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @transaction.state %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%=h @transaction.rating %>
+</p>
+
+
+<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
+<%= link_to 'Back', transactions_path %>

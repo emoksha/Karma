@@ -1,0 +1,29 @@
+<% if flash[:message] %>
+<div class="message"><%= flash[:message] %></div>
+<% end %>
+
+<h1>Welcome <%=h @user.name %></h1>
+
+<h3>Recent Posts</h3>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Location</th>
+    <th>Units</th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%=h post.description %></td>
+    <td><%=h post.location %></td>
+    <td><%=h post.units %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+  </tr>
+<% end %>
+
+</table>
+
+<%= link_to 'New post', new_post_path %>
+

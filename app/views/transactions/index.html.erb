@@ -1,0 +1,30 @@
+<h1>Listing transactions</h1>
+
+<table>
+  <tr>
+    <th>User id giving</th>
+    <th>User id receiving</th>
+    <th>Post</th>
+    <th>Description</th>
+    <th>State</th>
+    <th>Rating</th>
+  </tr>
+
+<% @transactions.each do |transaction| %>
+  <tr>
+    <td><%=h transaction.user_id_giving %></td>
+    <td><%=h transaction.user_id_receiving %></td>
+    <td><%=h transaction.post_id %></td>
+    <td><%=h transaction.description %></td>
+    <td><%=h transaction.state %></td>
+    <td><%=h transaction.rating %></td>
+    <td><%= link_to 'Show', transaction %></td>
+    <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
+    <td><%= link_to 'Destroy', transaction, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New transaction', new_transaction_path %>
